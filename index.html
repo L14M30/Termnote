@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Termnote</title>
+
+        <style>
+			.header {
+				display:flex;
+				justify-content:left;
+				align-items:center;
+				gap:10px;
+				font-size:2em;
+				color: #ff99cd;
+				border-bottom:5px solid #ff99cd;
+			}
+			
+			.launch {
+				border: 5px solid #ff99cd;
+				padding:10px;
+				gap:15px;
+			}
+			
+			.launch p {
+				text-align: center;
+				word-wrap: break-word;
+			
+			}
+			
+			.DialogContainer {
+				display: flex;
+				gap:15px;
+				align-items: center;
+				justify-content: center;
+			
+			}
+			
+			
+			.launchervisit {
+				border: 2px solid green;
+				padding:10px 25px;
+				background-color:mediumseagreen;
+				color:white;
+				font-size: 1em;
+			}
+			
+			.launcherclose {
+				border: 2px solid red;
+				padding: 10px 15px;
+				background-color: tomato;
+				color: white;
+				font-size: 1em;
+			}
+			
+			.subheader {
+				border-bottom: 5px solid #ff99cd;
+				padding:5px;
+			}
+			
+			.launcherbutton {
+				padding: 5px 10px;
+				border: 2px solid #ff99cd;
+				font-weight: bold;
+			}
+			
+			.content {
+				justify-content: center;
+				align-items: center;
+				text-align: center;
+			}
+			
+			.gap {
+				height:5vh;
+			}
+
+			
+			
+	</style>
+</head>
+<body>
+    <div class="header">
+			<img src="termnote.png" width=150 height=auto alt="Termnote Logo">
+			<h1><i>Termnote</i></h1>
+		</div>
+		<div class="subheader">
+            <a href="https://github.com/L14M30/Termnote" target="_blank">
+                <img alt="Static Badge" src="https://img.shields.io/badge/Termnote-Github-pink?logo=github&logoColor=white&style=for-the-badge">
+            </a>
+            <a href="https://github.com/L14M30/Termnote/releases/latest" target="_blank">
+                <img alt="Static Badge" src="https://img.shields.io/badge/Termnote-Latest-green?logo=github&logoColor=white&style=for-the-badge">
+            </a>
+            <a href="https://github.com/L14M30">
+                <img alt="Static Badge" src="https://img.shields.io/badge/Personal-Github-blue?logo=github&logoColor=white&style=for-the-badge">
+            </a>
+
+        </div>
+        <div class="gap"></div>
+        <div class="content">
+
+            
+            <h1 style="color: #ff99cd; font-size: 3em;">Termnote</h1>
+
+            <button command="show-modal" commandfor="InstallDialog" class="launcherbutton">Install</button>
+
+            <dialog id="InstallDialog" class="launch">
+				<h1>LINUX</h1>
+                <br>
+                <h3>Installing via CURL</h3>
+                <p>Run the following command! It is recommended NOT to use SUDO or Root privileges. Instead you will be asked for root privileges during installation.</p>
+                <pre><code>curl -fsSL https://github.com/L14M30/Termnote/releases/download/Latest/termnote_release_v.X_X_X_linux.sh | bash</code></pre>
+                <p>Replace <code>v.X_X_X</code> with the latest version number. Which you can find here: <a href="https://github.com/L14M30/Termnote/releases/latest" target="_blank">Releases</a></p>
+				<button command="close" commandfor="InstallDialog" class="launcherclose">Close</button>
+			</dialog>
+
+            <div id="readme">Loading README...</div>
+
+            <div class="gap"></div>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script>
+  const repo = "L14M30/Termnote";
+
+  fetch(`https://api.github.com/repos/${repo}/readme`)
+    .then(response => response.json())
+    .then(data => fetch(data.download_url))
+    .then(response => response.text())
+    .then(markdown => {
+      document.getElementById("readme").innerHTML =
+        marked.parse(markdown);
+    });
+</script>
+</body>
+</html>
