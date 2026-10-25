@@ -1,6 +1,6 @@
 # Termnote
 [![Static Badge](https://img.shields.io/badge/Liamz.vip-Website-blue)](https://www.liamz.vip)
-[![Static Badge](https://img.shields.io/badge/Termnote-Website-orange)](https://www.termnote.liamz.vip)
+[![Static Badge](https://img.shields.io/badge/Termnote-Website-orange)](https://termnote.liamz.vip)
 [![Static Badge](https://img.shields.io/badge/Personal-Github-white?logo=github)](https://www.github.com/L14M30)
 [![Static Badge](https://img.shields.io/badge/LiamzStudios-Github-darkblue?logo=github)](https://www.github.com/LiamzStudio)
 
