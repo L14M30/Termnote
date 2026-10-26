@@ -1,4 +1,3 @@
-```bash
 #!/bin/bash
 
 echo
@@ -31,4 +30,4 @@ if [[ "$answer" =~ ^[Yy]$ ]]; then
 else
     echo "Cancelled."
 fi
-```
+
