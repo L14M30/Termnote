@@ -25,3 +25,7 @@
 <a href="https://termnote.liamz.vip">
   <img alt="Static Badge" src="https://img.shields.io/badge/Termnote-Website-orange">
 </a>
+<br>
+<a href="https://termnote.liamz.vip?dialog=install">
+  <img alt="Static Badge" src="https://img.shields.io/badge/Get-Started-lightpink?amp;logoColor=white&amp;style=for-the-badge">
+</a>
