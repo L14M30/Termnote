@@ -133,5 +133,16 @@
         marked.parse(markdown);
     });
 </script>
+<script>
+	const params = new URLSearchParams(window.location.search);
+
+if (params.get("dialog") === "install") {
+    const installDialog = document.getElementById("InstallDialog");
+
+    if (installDialog) {
+        installDialog.showModal();
+    }
+}
+</script>
 </body>
 </html>
