@@ -20,3 +20,8 @@
   your machines and access them directly from your terminal, so you always
   know what's running where and what each system is responsible for.
 </p>
+
+<p>Details on how to install the program can be found on the website!</p>
+<a href="https://termnote.liamz.vip">
+  <img alt="Static Badge" src="https://img.shields.io/badge/Termnote-Website-orange">
+</a>
